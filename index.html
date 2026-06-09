@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Long-Term Investment Guide</title>
+<h2 class="sr-only">Long-term investment guide covering ETFs, mutual funds, 20+ investment options, and three sample portfolios for a 41-year-old hands-off investor</h2>
+
+<style>
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  
+  /* Red & Chrome Basis Palette */
+  --color-brand-primary: #1e2229;  /* Deep Steel/Slate */
+  --color-brand-accent: #b91c1c;   /* Crimson Red Accent */
+  --color-brand-accent-hover: #991b1b;
+  --color-bg-main: #f1f3f5;        /* Light Chrome/Industrial Gray */
+  --color-bg-card: #ffffff;
+  --color-border: #cbd5e1;         /* Brushed Metal Border */
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-tertiary: #64748b;
+  
+  /* Brushed Chrome / Metallic Gradient Backgrounds */
+  --gradient-chrome: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+  --gradient-chrome-dark: linear-gradient(180deg, #334155 0%, #1e293b 100%);
+
+  /* Status Colors (Subtle & Polished) */
+  --status-green-bg: #f0fdf4;  --status-green-txt: #166534;  --status-green-border: #bbf7d0;
+  --status-blue-bg: #eff6ff;   --status-blue-txt: #1e40af;   --status-blue-border: #bfdbfe;
+  --status-amber-bg: #fffbeb;  --status-amber-txt: #854d0e;  --status-amber-border: #fef08a;
+  --status-purple-bg: #faf5ff; --status-purple-txt: #6b21a8; --status-purple-border: #e9d5ff;
+  --status-coral-bg: #fef2f2;  --status-coral-txt: #991b1b;  --status-coral-border: #fee2e2;
+  --status-gray-bg: #f8fafc;   --status-gray-txt: #334155;   --status-gray-border: #cbd5e1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-brand-primary: #f8fafc;
+    --color-brand-accent: #ef4444;   /* Vivid Crimson for Dark Mode */
+    --color-brand-accent-hover: #f87171;
+    --color-bg-main: #0b0f17;        /* Deep Metallic Charcoal */
+    --color-bg-card: #151b26;        /* Dark Slate Steel */
+    --color-border: #2e3748;         /* Dark Chrome Trim */
+    --color-text-primary: #f8fafc;
+    --color-text-secondary: #94a3b8;
+    --color-text-tertiary: #64748b;
+    
+    --gradient-chrome: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+    
+    --status-green-bg: rgba(22, 101, 52, 0.2);   --status-green-txt: #4ade80;  --status-green-border: rgba(74, 222, 128, 0.4);
+    --status-blue-bg: rgba(30, 64, 175, 0.2);    --status-blue-txt: #60a5fa;   --status-blue-border: rgba(96, 165, 250, 0.4);
+    --status-amber-bg: rgba(133, 77, 14, 0.2);   --status-amber-txt: #facc15;  --status-amber-border: rgba(250, 204, 21, 0.4);
+    --status-purple-bg: rgba(107, 33, 168, 0.2); --status-purple-txt: #c084fc; --status-purple-border: rgba(192, 132, 252, 0.4);
+    --status-coral-bg: rgba(153, 27, 27, 0.2);   --status-coral-txt: #f87171;  --status-coral-border: rgba(248, 113, 113, 0.4);
+    --status-gray-bg: rgba(51, 65, 85, 0.2);     --status-gray-txt: #cbd5e1;   --status-gray-border: rgba(203, 213, 225, 0.4);
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans); background-color: var(--color-bg-main); color: var(--color-text-primary); line-height: 1.6; padding: 2rem 1rem; }
+
+.container { max-width: 1100px; margin: 0 auto; }
+
+/* Tabs Navigation - Chrome & Crimson Steel Styling */
+.tabs { display: flex; gap: 0; border: 1px solid var(--color-border); background: var(--gradient-chrome); border-radius: 4px; overflow: hidden; margin-bottom: 2rem; box-shadow: inset 0 1px 0 rgba(255,255,255,0.2); }
+.tab { flex: 1; padding: 14px 16px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; cursor: pointer; border: none; background: transparent; color: var(--color-text-secondary); transition: all 0.2s ease; border-right: 1px solid var(--color-border); text-align: center; }
+.tab:last-child { border-right: none; }
+.tab.active { color: #ffffff; background: var(--color-brand-accent); border-bottom: none; box-shadow: inset 0 2px 4px rgba(0,0,0,0.2); text-shadow: 0 1px 2px rgba(0,0,0,0.3); }
+.tab:hover:not(.active) { color: var(--color-text-primary); background: rgba(0, 0, 0, 0.04); }
+
+/* Panels */
+.panel { display: none; animation: fadeIn 0.3s ease; }
+.panel.active { display: block; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Typography & Section Branding */
+.section-label { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-secondary); margin: 2.5rem 0 1rem; border-left: 3px solid var(--color-brand-accent); padding-left: 10px; }
+
+/* Corporate Metallic Cards */
+.card { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: 4px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+.info-box { background: var(--color-bg-card); border: 1px solid var(--color-border); border-left: 4px solid var(--color-brand-primary); border-radius: 0 4px 4px 0; padding: 1.25rem 1.5rem; margin: 1rem 0; }
+.info-box.accent-box { border-left-color: var(--color-brand-accent); }
+.info-title { font-size: 15px; font-weight: 600; margin-bottom: 6px; color: var(--color-text-primary); }
+.info-body { font-size: 14px; color: var(--color-text-secondary); }
+
+/* Fund Layouts */
+.fund-row { display: grid; grid-template-columns: 100px 1fr; gap: 20px; align-items: start; }
+.ticker { font-size: 13px; font-weight: 700; color: var(--color-text-primary); font-family: var(--font-mono); background: var(--gradient-chrome); padding: 4px 10px; border: 1px solid var(--color-border); border-radius: 3px; text-align: center; display: inline-block; letter-spacing: 0.02em; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+.fund-name { font-size: 16px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 4px; }
+.fund-meta { font-size: 13px; color: var(--color-text-secondary); margin-bottom: 10px; }
+.fund-meta strong { color: var(--color-brand-accent); font-weight: 700; }
+
+/* Business Badges */
+.badge-group { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.badge { display: inline-block; font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: 2px; border: 1px solid transparent; }
+.badge-green { background: var(--status-green-bg); color: var(--status-green-txt); border-color: var(--status-green-border); }
+.badge-blue { background: var(--status-blue-bg); color: var(--status-blue-txt); border-color: var(--status-blue-border); }
+.badge-amber { background: var(--status-amber-bg); color: var(--status-amber-txt); border-color: var(--status-amber-border); }
+.badge-purple { background: var(--status-purple-bg); color: var(--status-purple-txt); border-color: var(--status-purple-border); }
+.badge-coral { background: var(--status-coral-bg); color: var(--status-coral-txt); border-color: var(--status-coral-border); }
+.badge-gray { background: var(--status-gray-bg); color: var(--status-gray-txt); border-color: var(--status-gray-border); }
+
+/* Data Grids & Matrices */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.metric-card { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: 4px; padding: 1.25rem; box-shadow: 0 1px 2px rgba(0,0,0,0.02); }
+.metric-label { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-text-secondary); margin-bottom: 6px; }
+.metric-value { font-size: 26px; font-weight: 700; color: var(--color-brand-accent); }
+
+.comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 1.5rem; }
+.compare-card { border: 1px solid var(--color-border); border-top: 4px solid var(--color-brand-primary); border-radius: 4px; padding: 1.5rem; background: var(--color-bg-card); }
+.compare-card.accent-trim { border-top-color: var(--color-brand-accent); }
+.compare-title { font-size: 16px; font-weight: 600; margin-bottom: 1rem; color: var(--color-text-primary); display: flex; align-items: center; gap: 8px; }
+
+.pro, .con { font-size: 14px; padding: 5px 0; display: flex; gap: 8px; align-items: flex-start; color: var(--color-text-secondary); }
+.pro span:first-child { color: var(--status-green-txt); font-weight: 700; }
+.con span:first-child { color: var(--color-brand-accent); font-weight: 700; }
+
+/* Portfolio Structure Matrix */
+.portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.port-card { border: 1px solid var(--color-border); border-radius: 4px; padding: 1.5rem; background: var(--color-bg-card); display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
+.port-title { font-size: 16px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 2px; }
+.port-risk { font-size: 13px; font-weight: 600; margin-bottom: 1.25rem; }
+.alloc-item { margin-bottom: 10px; }
+.alloc-bar { width: 100%; height: 6px; border-radius: 2px; background: var(--color-bg-main); margin: 4px 0 0; position: relative; overflow: hidden; border: 1px solid var(--color-border); }
+.alloc-fill { height: 100%; border-radius: 2px; }
+.alloc-label { display: flex; justify-content: space-between; font-size: 13px; color: var(--color-text-secondary); }
+
+/* Premium Institutional Recommendation Block */
+.rec-card { border: 1px solid var(--color-border); border-top: 4px solid var(--color-brand-accent); border-radius: 4px; padding: 2rem; background: var(--color-bg-card); margin-top: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+.rec-badge { background: var(--status-coral-bg); color: var(--status-coral-txt); border: 1px solid var(--status-coral-border); font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 2px; display: inline-block; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; }
+
+.divider { border: none; border-top: 1px solid var(--color-border); margin: 1.5rem 0; }
+
+/* Charts Optimization */
+.chart-wrap { position: relative; width: 100%; height: 220px; margin: 1.5rem 0; }
+.chart-wrap-tall { position: relative; width: 100%; height: 280px; margin: 1.5rem 0; }
+.chart-legend { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--color-text-secondary); margin-top: 12px; padding: 0 4px; }
+.legend-item { display: flex; align-items: center; gap: 6px; }
+.legend-color { width: 12px; height: 12px; border-radius: 2px; border: 1px solid var(--color-border); }
+
+.disclaimer { font-size: 12px; color: var(--color-text-tertiary); line-height: 1.6; margin-top: 2rem; border-top: 1px solid var(--color-border); padding-top: 1rem; }
+
+@media (max-width: 768px) {
+  .comparison-grid, .two-col, .portfolio-grid, .fund-row { grid-template-columns: 1fr; }
+  .tabs { flex-direction: column; border-right: 1px solid var(--color-border); }
+  .tab { border-right: none; border-bottom: 1px solid var(--color-border); }
+  .tab:last-child { border-bottom: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="tabs" id="mainTabs">
+    <button class="tab active" onclick="switchTab('basics')">ETFs & Mutual Funds Overview</button>
+    <button class="tab" onclick="switchTab('funds')">Investment Options Asset Class</button>
+    <button class="tab" onclick="switchTab('portfolios')">Asset Allocation Models</button>
+    <button class="tab" onclick="switchTab('recommendation')">Strategic Recommendation</button>
+  </div>
+
+  <div id="basics" class="panel active">
+    <div class="info-box">
+      <div class="info-title">Exchange-Traded Funds (ETFs) Definition</div>
+      <div class="info-body">An Exchange-Traded Fund is a basket of securities — stocks, bonds, or other assets — that trades on a stock exchange just like an individual stock. When you buy one share of an ETF like VTI, you instantly own a tiny slice of thousands of U.S. companies. ETFs typically track an index (like the S&amp;P 500) passively, meaning a computer manages them, not an expensive team of analysts. You can buy or sell ETFs at any point during market hours at the current market price.</div>
+    </div>
+
+    <div class="info-box">
+      <div class="info-title">Mutual Funds Definition</div>
+      <div class="info-body">A mutual fund pools money from many investors to buy a collection of securities. Unlike ETFs, mutual fund shares are priced once per day after market close — you don't know the exact price when you place your order. Mutual funds can be actively managed (a human fund manager picks stocks) or passively managed (index funds). They often have minimum investment requirements and are bought directly through the fund company, not on a stock exchange.</div>
+    </div>
+
+    <p class="section-label">Structural Comparison Matrix</p>
+    <div class="comparison-grid">
+      <div class="compare-card accent-trim">
+        <div class="compare-title">Exchange-Traded Funds (ETFs)</div>
+        <div class="pro"><span>+</span><span>Intraday trading flexibility on standard stock exchanges</span></div>
+        <div class="pro"><span>+</span><span>Optimized expense structures / low cost basis</span></div>
+        <div class="pro"><span>+</span><span>High structural tax efficiency (mitigated capital gain distributions)</span></div>
+        <div class="pro"><span>+</span><span>No structural account minimum barriers (1 share entry)</span></div>
+        <div class="pro"><span>+</span><span>Daily fund transparency metrics</span></div>
+        <div class="con"><span>–</span><span>Subject to marginal bid/ask spreads</span></div>
+        <div class="con"><span>–</span><span>Brokerage account requirement</span></div>
+        <div class="con"><span>–</span><span>Fractional share execution varies by custodian</span></div>
+      </div>
+      <div class="compare-card">
+        <div class="compare-title">Mutual Funds</div>
+        <div class="pro"><span>+</span><span>Streamlined automated recurring allocation scheduling</span></div>
+        <div class="pro"><span>+</span><span>Exact dollar-amount execution models</span></div>
+        <div class="pro"><span>+</span><span>Native built-in programmatic dividend reinvestment</span></div>
+        <div class="pro"><span>+</span><span>Availability of active alpha-seeking manager mandates</span></div>
+        <div class="con"><span>–</span><span>Single daily pricing post-market close (no intraday velocity control)</span></div>
+        <div class="con"><span>–</span><span>Higher average management expense ratios</span></div>
+        <div class="con"><span>–</span><span>Standard minimum capital requirement standard ($1,000–$3,000)</span></div>
+        <div class="con"><span>–</span><span>Tax efficiency friction (unsolicited year-end capital gains distributions)</span></div>
+        <div class="con"><span>–</span><span>Reporting opacity (holdings disclosed quarterly)</span></div>
+      </div>
+    </div>
+
+    <p class="section-label">Suitability Analysis For Passive Investors</p>
+    <div class="card">
+      <div class="fund-name" style="margin-bottom:8px">Passive Index ETFs Remain the Preferred Core Vehicle</div>
+      <div class="fund-meta" style="line-height: 1.7;">For systematic allocations ($50/paycheck metrics) without micro-management requirements, low-cost index ETFs provide optimized infrastructure. They run minimal structural fee burdens (expense ratios scale down to 0.03%), higher capital retention through tax efficiency, and no capital floor constraints. <em>Operational note:</em> If fractional-share trading execution constraints exist within an E*TRADE account architecture, cash reserves will build dynamically until complete share thresholds are achieved. Alternatively, institutional-grade index mutual funds (e.g., Vanguard's asset base like VTSAX) function cleanly where precise dollar-cost averaging tools are prioritized. Strategically deploy ETFs where automated recurring architectures align, or utilize mutual fund structures for exact dollar targets.</div>
+    </div>
+
+    <p class="section-label">Fiscal &amp; Taxation Frameworks</p>
+    <div class="two-col" style="margin-bottom:0.75rem">
+      <div class="metric-card">
+        <div class="metric-label">ETF Tax Efficiencies</div>
+        <div style="font-size:14px; color:var(--color-text-secondary); margin-top:4px; line-height:1.5">Utilizing custom asset creation and "in-kind" redemption matching processes, ETFs cleanly bypass programmatic capital gains creation. Fiscal liabilities remain deferred until personal position liquidations occur, maximizing asset efficiency in standard taxable brokerage structures.</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Mutual Fund Embedded Liabilities</div>
+        <div style="font-size:14px; color:var(--color-text-secondary); margin-top:4px; line-height:1.5">Active structures require portfolio turning that creates systematic pass-through capital gains distributions to all current equity owners. Investors run net tax exposure liabilities regardless of individual position holding periods, even during negative return fiscal periods.</div>
+      </div>
+    </div>
+
+    <p class="section-label">Fee Drifts: Long-Term Compounding Degradation Analysis</p>
+    <div class="card">
+      <div style="font-size:14px; color:var(--color-text-secondary); margin-bottom:12px; line-height:1.7">The management expense ratio outlines annualized structural operating costs drawn directly against assets under management. A 1.00% operational headwind scales to a $100 annual fee base per $10,000 unit; a optimized 0.03% architecture drops structural bleed to $3 annually. Over secular lifecycles, this delta represents major divergence due to forward compounding paths.</div>
+      <div class="chart-wrap">
+        <canvas id="expChart" role="img" aria-label="Growth of $10,000 over 30 years at three expense ratios: 0.03%, 0.5%, 1%">After 30 years: 0.03% fee grows to ~$74,400; 0.5% fee grows to ~$66,400; 1% fee grows to ~$57,400. All assume 7% annual return before fees.</canvas>
+      </div>
+      <div class="chart-legend">
+        <div class="legend-item"><span class="legend-color" style="background:#b91c1c;"></span><span>0.03% Optimized Base (Crimson Slate Tier)</span></div>
+        <div class="legend-item"><span class="legend-color" style="background:#475569;"></span><span>0.50% Market Core Average</span></div>
+        <div class="legend-item"><span class="legend-color" style="background:#cbd5e1;"></span><span>1.00% Premium Active Fee Bracket</span></div>
+      </div>
+      <div style="font-size:12px; color:var(--color-text-tertiary); margin-top:12px;">Hypothetical models run off a $10,000 original capital base, 7.00% gross asset yield assumption, 30-year secular investment timeline. The optimized fee framework captures an additional ~$17,000 in capital recovery against higher pricing models.</div>
+    </div>
+  </div>
+
+  <div id="funds" class="panel">
+    <div style="font-size:14px; color:var(--color-text-secondary); margin-bottom:1.5rem; line-height:1.7">The following selection contains institutional-grade, liquid, low-cost asset index options across multiple core categories. Internal cost structures represent approximate current operational periods—verify valid fee prospectus metrics with the issuer before final execution.</div>
+
+    <p class="section-label">Broad U.S. Equity Markets</p>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">VTI</span></div>
+        <div>
+          <div class="fund-name">Vanguard Total Stock Market ETF</div>
+          <div class="fund-meta">Asset Class: Broad Market U.S. Equities &nbsp;|&nbsp; Expense Ratio: <strong>0.03%</strong></div>
+          <div class="fund-meta">Comprehensive index capturing ~3,700 positions across large, mid, and small-cap profiles. Acts as a core liquid beta holding mirroring the systemic expansion of the domestic economy. Deploys minor style tilt weights relative to isolated large-cap tranches.</div>
+          <div class="badge-group">
+            <span class="badge badge-coral">Hands-Off: Institutional Fit</span>
+            <span class="badge badge-gray">Low Cost Tier</span>
+            <span class="badge badge-gray">Core Allocation Component</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">SCHB</span></div>
+        <div>
+          <div class="fund-name">Schwab U.S. Broad Market ETF</div>
+          <div class="fund-meta">Asset Class: Broad Market U.S. Equities &nbsp;|&nbsp; Expense Ratio: <strong>0.03%</strong></div>
+          <div class="fund-meta">Benchmarks the Dow Jones U.S. Broad Market Index tracking ~2,500 holdings. Deloys functional profile tracking continuity identical to total stock frameworks. Excellent alternative vehicle for risk allocation diversification or asset rotation paths.</div>
+          <div class="badge-group">
+            <span class="badge badge-coral">Hands-Off: Institutional Fit</span>
+            <span class="badge badge-gray">Low Cost Tier</span>
+            <span class="badge badge-gray">VTI Liquidity Proxy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label">Large-Cap Core (S&amp;P 500 Structures)</p>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">VOO</span></div>
+        <div>
+          <div class="fund-name">Vanguard S&amp;P 500 ETF</div>
+          <div class="fund-meta">Asset Class: U.S. Large-Cap Blue Chip Equities &nbsp;|&nbsp; Expense Ratio: <strong>0.03%</strong></div>
+          <div class="fund-meta">Direct exposure to the 500 dominant institutional market capitalizations inside the domestic economy. Represents one of the most reliable and performance-tested systematic index mandates in historical financial records over rolling 20-year periods.</div>
+          <div class="badge-group">
+            <span class="badge badge-coral">Hands-Off: Institutional Fit</span>
+            <span class="badge badge-gray">Low Cost Tier</span>
+            <span class="badge badge-gray">Core Equity Benchmark</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">IVV</span></div>
+        <div>
+          <div class="fund-name">iShares Core S&amp;P 500 ETF</div>
+          <div class="fund-meta">Asset Class: U.S. Large-Cap Blue Chip Equities &nbsp;|&nbsp; Expense Ratio: <strong>0.03%</strong></div>
+          <div class="fund-meta">BlackRock institutional index framework targeting large-cap positions. Highly institutional liquid trading profiles with ultra-compressed bid/ask spreads. Functions perfectly inside institutional workflows interchangeably alongside tracking alternatives.</div>
+          <div class="badge-group">
+            <span class="badge badge-coral">Hands-Off: Institutional Fit</span>
+            <span class="badge badge-gray">Low Cost Tier</span>
+            <span class="badge badge-gray">Interchangeable Beta Tool</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label">Secular Growth Factors</p>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">VUG</span></div>
+        <div>
+          <div class="fund-name">Vanguard Growth ETF</div>
+          <div class="fund-meta">Asset Class: Large-Cap U.S. Growth Segments &nbsp;|&nbsp; Expense Ratio: <strong>0.04%</strong></div>
+          <div class="fund-meta">Concentrated exposure towards heavy expansion equity models, heavily emphasizing secular technology segments. Captures amplified beta trends in expansion phases but introduces heightened volatility drawdowns during interest-rate adjustments.</div>
+          <div class="badge-group">
+            <span class="badge badge-gray">Hands-Off: Standard Fit</span>
+            <span class="badge badge-amber">Asymmetric Risk Variable</span>
+            <span class="badge badge-gray">Macro Factor Overweight</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">QQQM</span></div>
+        <div>
+          <div class="fund-name">Invesco Nasdaq-100 ETF (mini)</div>
+          <div class="fund-meta">Asset Class: Large-Cap Technology/Growth Sector &nbsp;|&nbsp; Expense Ratio: <strong>0.15%</strong></div>
+          <div class="fund-meta">Tracks the non-financial modern enterprise basket on the Nasdaq marketplace. Structurally features strong capital growth track records driven by corporate concentration profiles. High system volatility framework; optimized version for structural long-term asset builders.</div>
+          <div class="badge-group">
+            <span class="badge badge-gray">Hands-Off: Standard Fit</span>
+            <span class="badge badge-coral">High Volatility Vector</span>
+            <span class="badge badge-gray">Satellite Tactical Overlay</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label">Equity Income &amp; Dividend Quality Factors</p>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">VYM</span></div>
+        <div>
+          <div class="fund-name">Vanguard High Dividend Yield ETF</div>
+          <div class="fund-meta">Asset Class: High Yield U.S. Dividend Equities &nbsp;|&nbsp; Expense Ratio: <strong>0.06%</strong></div>
+          <div class="fund-meta">Prioritizes high relative dividend yields from cash-generative industrial sectors, financials, and consumer services. Offers defensive stability characteristics during broad market cyclical corrections. Typical cash yield tracks around 2.5–3.0%.</div>
+          <div class="badge-group">
+            <span class="badge badge-coral">Hands-Off: Institutional Fit</span>
+            <span class="badge badge-gray">Defensive Style Focus</span>
+            <span class="badge badge-gray">Income Optimization Tool</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">DGRO</span></div>
+        <div>
+          <div class="fund-name">iShares Core Dividend Growth ETF</div>
+          <div class="fund-meta">Asset Class: Dividend Growth Quality Factors &nbsp;|&nbsp; Expense Ratio: <strong>0.08%</strong></div>
+          <div class="fund-meta">Filters for companies maintaining continuous trailing sequences of dividend growth distribution expansions. This quality metric functions as a strong balance-sheet check, outperforming raw yield targets on long total-return projections.</div>
+          <div class="badge-group">
+            <span class="badge badge-coral">Hands-Off: Institutional Fit</span>
+            <span class="badge badge-gray">Quality Balance Sheet Tilt</span>
+            <span class="badge badge-gray">Compounding Core Strategy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label">Defensive Value Factors</p>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">VTV</span></div>
+        <div>
+          <div class="fund-name">Vanguard Value ETF</div>
+          <div class="fund-meta">Asset Class: Large-Cap U.S. Value Stocks &nbsp;|&nbsp; Expense Ratio: <strong>0.04%</strong></div>
+          <div class="fund-meta">Allocates capital into cash flow positive positions showing compressed valuation indicators relative to book value and income parameters. Tends to act as strong ballast inside global macro allocations during growth factor adjustments.</div>
+          <div class="badge-group">
+            <span class="badge badge-coral">Hands-Off: Institutional Fit</span>
+            <span class="badge badge-gray">Low Beta Profile</span>
+            <span class="badge badge-gray">Style Divergence Anchor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label">Technology &amp; Modern Infrastructure Sector</p>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">VGT</span></div>
+        <div>
+          <div class="fund-name">Vanguard Information Technology ETF</div>
+          <div class="fund-meta">Asset Class: U.S. Information Technology Sector &nbsp;|&nbsp; Expense Ratio: <strong>0.10%</strong></div>
+          <div class="fund-meta">A high-velocity performance sector instrument carrying deep capital concentration weights across mega-cap tech enterprises. Runs exceptional historic trailing multi-year records, alongside massive structural industry concentration vulnerabilities. Recommended as tactical satellite only.</div>
+          <div class="badge-group">
+            <span class="badge badge-amber">Hands-Off: Moderate Fit</span>
+            <span class="badge badge-coral">Sector Concentration Risk</span>
+            <span class="badge badge-gray">Tactical Satellite Component</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label">Defensive Healthcare Sector</p>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">VHT</span></div>
+        <div>
+          <div class="fund-name">Vanguard Health Care ETF</div>
+          <div class="fund-meta">Asset Class: U.S. Healthcare Ecosystem &nbsp;|&nbsp; Expense Ratio: <strong>0.10%</strong></div>
+          <div class="fund-meta">Aggregates pharmaceutical, biotechnology, medical technology, and healthcare service platforms. Insulated structural demand profile buffers macro cycle downturns. Positioned to catch demographic aging tailwinds, balanced against shifting regulatory risks.</div>
+          <div class="badge-group">
+            <span class="badge badge-coral">Hands-Off: Institutional Fit</span>
+            <span class="badge badge-gray">Inelastic Demand Focus</span>
+            <span class="badge badge-gray">Non-Cyclical Sector Anchor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label">Energy Sector Infrastructure</p>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">XLE</span></div>
+        <div>
+          <div class="fund-name">Energy Select Sector SPDR Fund</div>
+          <div class="fund-meta">Asset Class: U.S. Fossil Energy Infrastructure &nbsp;|&nbsp; Expense Ratio: <strong>0.09%</strong></div>
+          <div class="fund-meta">Concentrated tracking vehicle mapping global exploration majors and pipeline operations. Highly correlated to physical structural energy pricing cycles, rendering it a highly viable systemic inflation protection instrument inside large allocations.</div>
+          <div class="badge-group">
+            <span class="badge badge-amber">Hands-Off: Moderate Fit</span>
+            <span class="badge badge-amber">Commodity Pricing Vulnerability</span>
+            <span class="badge badge-gray">Real Inflation Overlay</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label">Financial Services &amp; Banking Sector</p>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">VFH</span></div>
+        <div>
+          <div class="fund-name">Vanguard Financials ETF</div>
+          <div class="fund-meta">Asset Class: U.S. Banking &amp; Financial Services &nbsp;|&nbsp; Expense Ratio: <strong>0.10%</strong></div>
+          <div class="fund-meta">Encapsulates universal depository networks, risk underwriters, investment management operations, and transactional gateways. Captures structural tailwinds when interest rates move higher, but carries distinct macro cycle credit risk sensitivities.</div>
+          <div class="badge-group">
+            <span class="badge badge-amber">Hands-Off: Moderate Fit</span>
+            <span class="badge badge-amber">Macro Cycle Sensitivity</span>
+            <span class="badge badge-gray">Macro Rate Play Overlay</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label">International Equity (Ex-U.S.) Markets</p>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">VXUS</span></div>
+        <div>
+          <div class="fund-name">Vanguard Total International Stock ETF</div>
+          <div class="fund-meta">Asset Class: Global Non-U.S. Equities &nbsp;|&nbsp; Expense Ratio: <strong>0.07%</strong></div>
+          <div class="fund-meta">Provides systemic global diversification outside the domestic footprint across ~8,000 distinct operational corporate entities spanning established and developing regions. Offers vital structural balancing when domestic regions shift cycle momentum.</div>
+          <div class="badge-group">
+            <span class="badge badge-coral">Hands-Off: Institutional Fit</span>
+            <span class="badge badge-gray">Global Market Coverage</span>
+            <span class="badge badge-gray">Core Global Allocation Tool</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">VEA</span></div>
+        <div>
+          <div class="fund-name">Vanguard FTSE Developed Markets ETF</div>
+          <div class="fund-meta">Asset Class: Developed Markets Non-U.S. &nbsp;|&nbsp; Expense Ratio: <strong>0.05%</strong></div>
+          <div class="fund-meta">Allocates capital exclusively into industrialized international economies across European, Japanese, Canadian, and Pacific corporate landscapes. Compresses broad geographical risk profiles by filtering out developing financial jurisdictions.</div>
+          <div class="badge-group">
+            <span class="badge badge-coral">Hands-Off: Institutional Fit</span>
+            <span class="badge badge-gray">Developed Market Exposure</span>
+            <span class="badge badge-gray">Insulated International Baseline</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label">Developing Markets Markets</p>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">VWO</span></div>
+        <div>
+          <div class="fund-name">Vanguard FTSE Emerging Markets ETF</div>
+          <div class="fund-meta">Asset Class: Emerging Economic Jurisdictions &nbsp;|&nbsp; Expense Ratio: <strong>0.08%</strong></div>
+          <div class="fund-meta">High long-term demographic tailwind exposure focused heavily across emerging production and manufacturing nations. Features substantial structural return upside paths alongside intense geopolitical, legal, and operational volatility profiles.</div>
+          <div class="badge-group">
+            <span class="badge badge-amber">Hands-Off: Moderate Fit</span>
+            <span class="badge badge-coral">Geopolitical Risk Vector</span>
+            <span class="badge badge-gray">Satellite Return Optimizer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label">Fixed-Income Solutions (Bonds)</p>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">BND</span></div>
+        <div>
+          <div class="fund-name">Vanguard Total Bond Market ETF</div>
+          <div class="fund-meta">Asset Class: U.S. Investment Grade Fixed Income &nbsp;|&nbsp; Expense Ratio: <strong>0.03%</strong></div>
+          <div class="fund-meta">Tracks investment-grade sovereign debt issues and blue-chip institutional credit notes. Operates as the foundational capital preservation anchor across portfolio systems during volatile equity liquidation phases. Yield generation profile scales off central bank actions.</div>
+          <div class="badge-group">
+            <span class="badge badge-coral">Hands-Off: Institutional Fit</span>
+            <span class="badge badge-gray">Capital Preservation Tool</span>
+            <span class="badge badge-gray">System Allocation Ballast</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">SCHP</span></div>
+        <div>
+          <div class="fund-name">Schwab U.S. TIPS ETF</div>
+          <div class="fund-meta">Asset Class: Inflation-Indexed Treasury Debt &nbsp;|&nbsp; Expense Ratio: <strong>0.03%</strong></div>
+          <div class="fund-meta">Treasury Inflation-Protected Securities index matching. Par values calculate shifts directly against core cost index trackers. Serves as a precise, risk-insulated real asset purchasing power preservation overlay inside fixed allocations.</div>
+          <div class="badge-group">
+            <span class="badge badge-coral">Hands-Off: Institutional Fit</span>
+            <span class="badge badge-gray">Purchasing Power Protection</span>
+            <span class="badge badge-gray">Sovereign Debt Profile</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label">Real Estate Investment Trusts (REITs)</p>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">VNQ</span></div>
+        <div>
+          <div class="fund-name">Vanguard Real Estate ETF</div>
+          <div class="fund-meta">Asset Class: Liquid Commercial Real Estate &nbsp;|&nbsp; Expense Ratio: <strong>0.13%</strong></div>
+          <div class="fund-meta">Gives liquid structural equity format exposure across diversified infrastructure networks, data facilities, medical centers, and multi-family operations. Structurally pass-through systems distributing 90% of operating profits to yield components. Sensitive to cost-of-capital modifications.</div>
+          <div class="badge-group">
+            <span class="badge badge-gray">Hands-Off: Standard Fit</span>
+            <span class="badge badge-gray">Real Asset Alternative</span>
+            <span class="badge badge-gray">Yield Component Diversifier</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label">Target-Date Balanced Solutions</p>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">VTTSX</span></div>
+        <div>
+          <div class="fund-name">Vanguard Target Retirement 2045 Fund</div>
+          <div class="fund-meta">Asset Class: Dynamic Auto-Rebalancing Target Fund &nbsp;|&nbsp; Expense Ratio: <strong>0.08%</strong></div>
+          <div class="fund-meta">A unified complete portfolio framework nested into a single structural asset. Seamlessly tracks and adjusts across global equites and fixed-income assets, scaling down systematic volatility metrics as target calendar horizons come to term. Zero rebalance requirements. Requires a $1,000 threshold account initialization level.</div>
+          <div class="badge-group">
+            <span class="badge badge-purple">Hands-Off: Systematic Turnkey</span>
+            <span class="badge badge-gray">Automated Asset Glidepath</span>
+            <span class="badge badge-gray">Comprehensive Single Asset</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">FIPFX</span></div>
+        <div>
+          <div class="fund-name">Fidelity Freedom Index 2045 Fund</div>
+          <div class="fund-meta">Asset Class: Dynamic Auto-Rebalancing Target Fund &nbsp;|&nbsp; Expense Ratio: <strong>0.12%</strong></div>
+          <div class="fund-meta">Fidelity institutional-grade index target framework tracking systematic retirement lifecycles. Operates zero account baseline entrance hurdles, rendering it a clean operational instrument for consistent low-balance automated payroll deductions inside traditional custodial frameworks.</div>
+          <div class="badge-group">
+            <span class="badge badge-purple">Hands-Off: Systematic Turnkey</span>
+            <span class="badge badge-gray">Zero Dollar Entrance Hurdle</span>
+            <span class="badge badge-gray">Passive Index Baseline</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label">Static Balanced Capital Allocations</p>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">VSCGX</span></div>
+        <div>
+          <div class="fund-name">Vanguard LifeStrategy Conservative Growth Fund</div>
+          <div class="fund-meta">Asset Class: Fixed Static Allocation (40% Stock / 60% Bond) &nbsp;|&nbsp; Expense Ratio: <strong>0.11%</strong></div>
+          <div class="fund-meta">Maintains an ironclad, structured static model locking down ~40% global equities to ~60% institutional bond classes. Strongly compresses potential cyclical drawdown volatility. Formulated explicitly for defensive timelines or near-term liquidity protection periods.</div>
+          <div class="badge-group">
+            <span class="badge badge-purple">Hands-Off: Systematic Turnkey</span>
+            <span class="badge badge-gray">Low Beta Volatility Anchor</span>
+            <span class="badge badge-gray">Preservation Style Paradigm</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">AOM</span></div>
+        <div>
+          <div class="fund-name">iShares Core Moderate Allocation ETF</div>
+          <div class="fund-meta">Asset Class: Multi-Asset Balanced Model (60% Stock / 40% Bond) &nbsp;|&nbsp; Expense Ratio: <strong>0.15%</strong></div>
+          <div class="fund-meta">A systematic ETF-built diversified fund structure tracking the canonical moderate investment paradigm (60/40). Handles internal asset alignment shifts automatically. Offers standardized cross-asset tracking functionality instantly tradable on exchange.</div>
+          <div class="badge-group">
+            <span class="badge badge-purple">Hands-Off: Institutional Fit</span>
+            <span class="badge badge-gray">Automated Asset Rebalancing</span>
+            <span class="badge badge-gray">Unified 60/40 Blueprint</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label">Strategic Alternatives</p>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">FZROX</span></div>
+        <div>
+          <div class="fund-name">Fidelity ZERO Total Market Index Fund</div>
+          <div class="fund-meta">Asset Class: U.S. Total Market Index Equities &nbsp;|&nbsp; Expense Ratio: <strong>0.00%</strong></div>
+          <div class="fund-meta">An institutional cost outlier running an absolute zero operational expense ratio footprint. Maintained exclusively inside the Fidelity enterprise custody ecosystem. Ideal core component if asset platforms consolidate, but notes cross-platform transfer restrictions.</div>
+          <div class="badge-group">
+            <span class="badge badge-coral">Hands-Off: Institutional Fit</span>
+            <span class="badge badge-purple">Absolute Fee Elimination</span>
+            <span class="badge badge-gray">Fidelity Ecosystem Restricted</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="fund-row">
+        <div><span class="ticker">BNDW</span></div>
+        <div>
+          <div class="fund-name">Vanguard Total World Bond ETF</div>
+          <div class="fund-meta">Asset Class: Global Investment Grade Fixed Income &nbsp;|&nbsp; Expense Ratio: <strong>0.05%</strong></div>
+          <div class="fund-meta">Consolidates domestic and international investment-grade corporate and sovereign issues under a singular tracking framework. Mitigates localized currency swings via integrated institutional hedging protocols. Serves as a perfect global fixed-income baseline anchor.</div>
+          <div class="badge-group">
+            <span class="badge badge-coral">Hands-Off: Institutional Fit</span>
+            <span class="badge badge-gray">Global Fixed Income Footprint</span>
+            <span class="badge badge-gray">Comprehensive Debt Anchor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="portfolios" class="panel">
+    <div style="font-size:14px; color:var(--color-text-secondary); margin-bottom:1.5rem; line-height:1.7">The following risk models display varying mathematical profiles structured across diverse strategic parameters. Portfolio allocations are for educational reference—specific target frameworks should always be verified alongside formal investment advisory planning.</div>
+
+    <div class="portfolio-grid" style="margin-bottom:1.5rem">
+      <div class="port-card">
+        <div>
+          <div class="port-title">Conservative Risk Framework</div>
+          <div class="port-risk" style="color:var(--status-green-txt)">Low Volatility Mandate &nbsp;·&nbsp; 4–6% Est. Secular Target</div>
+          <div class="divider" style="margin: 0.5rem 0 1rem 0;"></div>
+          
+          <div class="alloc-item">
+            <div class="alloc-label"><span>U.S. Equities (VTI)</span><span>40%</span></div>
+            <div class="alloc-bar"><div class="alloc-fill" style="background:#475569; width:40%;"></div></div>
+          </div>
+          <div class="alloc-item">
+            <div class="alloc-label"><span>Int'l Equities (VXUS)</span><span>15%</span></div>
+            <div class="alloc-bar"><div class="alloc-fill" style="background:#64748b; width:15%;"></div></div>
+          </div>
+          <div class="alloc-item">
+            <div class="alloc-label"><span>U.S. Fixed Income (BND)</span><span>35%</span></div>
+            <div class="alloc-bar"><div class="alloc-fill" style="background:#94a3b8; width:35%;"></div></div>
+          </div>
+          <div class="alloc-item">
+            <div class="alloc-label"><span>Inflation Index Notes (SCHP)</span><span>5%</span></div>
+            <div class="alloc-bar"><div class="alloc-fill" style="background:#cbd5e1; width:5%;"></div></div>
+          </div>
+          <div class="alloc-item">
+            <div class="alloc-label"><span>Liquid REIT Assets (VNQ)</span><span>5%</span></div>
+            <div class="alloc-bar"><div class="alloc-fill" style="background:#cbd5e1; width:5%;"></div></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="port-card" style="border-color: var(--color-brand-accent); box-shadow: 0 4px 12px rgba(185, 28, 28, 0.05);">
+        <div>
+          <div class="port-title">Moderate Allocation Paradigm</div>
+          <div class="port-risk" style="color:var(--color-brand-accent)">Balanced Volatility Profile &nbsp;·&nbsp; 6–8% Est. Secular Target</div>
+          <div class="divider" style="margin: 0.5rem 0 1rem 0;"></div>
+          
+          <div class="alloc-item">
+            <div class="alloc-label"><span>U.S. Equities (VTI)</span><span>55%</span></div>
+            <div class="alloc-bar"><div class="alloc-fill" style="background:#b91c1c; width:55%;"></div></div>
+          </div>
+          <div class="alloc-item">
+            <div class="alloc-label"><span>Int'l Equities (VXUS)</span><span>25%</span></div>
+            <div class="alloc-bar"><div class="alloc-fill" style="background:#475569; width:25%;"></div></div>
+          </div>
+          <div class="alloc-item">
+            <div class="alloc-label"><span>U.S. Fixed Income (BND)</span><span>15%</span></div>
+            <div class="alloc-bar"><div class="alloc-fill" style="background:#94a3b8; width:15%;"></div></div>
+          </div>
+          <div class="alloc-item">
+            <div class="alloc-label"><span>Liquid REIT Assets (VNQ)</span><span>5%</span></div>
+            <div class="alloc-bar"><div class="alloc-fill" style="background:#cbd5e1; width:5%;"></div></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="port-card">
+        <div>
+          <div class="port-title">Aggressive Expansion Path</div>
+          <div class="port-risk" style="color:var(--status-coral-txt)">Amplified Volatility Vector &nbsp;·&nbsp; 7–10% Est. Secular Target</div>
+          <div class="divider" style="margin: 0.5rem 0 1rem 0;"></div>
+          
+          <div class="alloc-item">
+            <div class="alloc-label"><span>U.S. Equities (VTI)</span><span>50%</span></div>
+            <div class="alloc-bar"><div class="alloc-fill" style="background:#1e2229; width:50%;"></div></div>
+          </div>
+          <div class="alloc-item">
+            <div class="alloc-label"><span>Int'l Developed (VEA)</span><span>20%</span></div>
+            <div class="alloc-bar"><div class="alloc-fill" style="background:#475569; width:20%;"></div></div>
+          </div>
+          <div class="alloc-item">
+            <div class="alloc-label"><span>Emerging Jurisdictions (VWO)</span><span>15%</span></div>
+            <div class="alloc-bar"><div class="alloc-fill" style="background:#64748b; width:15%;"></div></div>
+          </div>
+          <div class="alloc-item">
+            <div class="alloc-label"><span>Growth Factor Overlays (VUG)</span><span>10%</span></div>
+            <div class="alloc-bar"><div class="alloc-fill" style="background:#b91c1c; width:10%;"></div></div>
+          </div>
+          <div class="alloc-item">
+            <div class="alloc-label"><span>Liquid REIT Assets (VNQ)</span><span>5%</span></div>
+            <div class="alloc-bar"><div class="alloc-fill" style="background:#cbd5e1; width:5%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-wrap-tall">
+      <canvas id="portChart" role="img" aria-label="Projected growth comparison of three portfolios over 30 years">Conservative portfolio grows more slowly with less volatility; moderate portfolio shows balanced growth; aggressive portfolio shows highest growth potential with more volatility.</canvas>
+    </div>
+    <div class="chart-legend" style="margin-bottom: 1.5rem;">
+      <div class="legend-item"><span class="legend-color" style="background:#94a3b8;"></span><span>Conservative Model (5.00% Baseline)</span></div>
+      <div class="legend-item"><span class="legend-color" style="background:#b91c1c;"></span><span>Moderate Model (7.00% Baseline Horizon)</span></div>
+      <div class="legend-item"><span class="legend-color" style="background:#1e2229;"></span><span>Aggressive Model (8.50% Baseline)</span></div>
+    </div>
+    <div style="font-size:12px; color:var(--color-text-tertiary); margin-bottom:1.5rem;">Modeling relies on a $5,200 initial capital layout matrix combined with steady ongoing inflows of $100 monthly ($50/paycheck interval sequences) over a continuous 30-year secular investment timeline. Performance profiles are purely illustrative projections; past market behavior presents no structural guarantees for future execution cycles.</div>
+
+    <p class="section-label">Systematic Portfolio Realignment Frameworks</p>
+    <div class="two-col">
+      <div class="info-box accent-box">
+        <div class="info-title">Conservative &amp; Moderate Realignment Rules</div>
+        <div class="info-body">Perform asset realignment audits once per year on a calendar lock. Trigger matching adjustments if any single asset tier drifts past a 5.00% absolute allocation threshold from targeted strategic weights. Given active inflow targets, rebalancing can routinely be executed by directing ongoing new cash targets into underweighted assets, preventing transactional tracking overhead.</div>
+      </div>
+      <div class="info-box">
+        <div class="info-title">Aggressive Structural Realignment Rules</div>
+        <div class="info-body">Utilize standard annualized checks, keeping closer analytical watch during periods of heavy macro market movements (exceeding 20.00% index corrections). Emerging and factor components introduce high localized divergence drifts. If manual optimization management overlays become cumbersome, shift cleanly toward institutional turnkey Target-Date setups.</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="recommendation" class="panel">
+    <div class="rec-card">
+      <div class="rec-header">
+        <span class="rec-badge">Strategic Baseline Specification</span>
+      </div>
+      <div style="font-size:22px; font-weight:700; color:var(--color-text-primary); margin-bottom:8px">Optimized Three-Fund Portfolio Matrix</div>
+      <div style="font-size:14px; color:var(--color-text-secondary); line-height:1.7; margin-bottom:24px">At age 41, with an estimated ~24-year terminal career horizon remaining before standard retirement target thresholds, asset preservation metrics do not yet require high risk-off defensive overhead. Concurrently, hyper-volatile satellite exposures can be efficiently bypassed. The institutional blueprint below establishes optimized equilibrium: robust structural track record, ultra-low fee metrics, and low administrative overhead.</div>
+
+      <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; margin-bottom:1.5rem;">
+        <div class="metric-card" style="text-align:center; border-top: 3px solid #b91c1c;">
+          <div class="metric-label" style="color:var(--color-brand-accent);">VTI</div>
+          <div class="metric-value" style="color:#0f172a;">60%</div>
+          <div style="font-size:13px; font-weight: 500; color:var(--color-text-secondary); margin-top:4px">Total U.S. Equity Beta</div>
+        </div>
+        <div class="metric-card" style="text-align:center; border-top: 3px solid #475569;">
+          <div class="metric-label" style="color:#475569;">VXUS</div>
+          <div class="metric-value" style="color:#0f172a;">30%</div>
+          <div style="font-size:13px; font-weight: 500; color:var(--color-text-secondary); margin-top:4px">Total Non-U.S. Equity</div>
+        </div>
+        <div class="metric-card" style="text-align:center; border-top: 3px solid #cbd5e1;">
+          <div class="metric-label" style="color:#64748b;">BND</div>
+          <div class="metric-value" style="color:#0f172a;">10%</div>
+          <div style="font-size:13px; font-weight: 500; color:var(--color-text-secondary); margin-top:4px">U.S. Fixed-Income Ballast</div>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <p class="section-label" style="margin-top:0">Strategic Underpinnings &amp; Architecture</p>
+
+      <div class="info-box" style="margin-bottom:1rem">
+        <div class="info-title">24-Year Multi-Cycle Runway Justifies High Equity Exposure</div>
+        <div class="info-body">With a long path toward retirement, your structural time horizon allows you to step cleanly through consecutive economic cycles. Historical evidence indicates that diversified institutional equity weightings held for 20+ year horizons yield clear asset growth outcomes. A 90/10 strategic equity/debt configuration aligns tightly with leading institutional baseline allocation paths.</div>
+      </div>
+      <div class="info-box" style="margin-bottom:1rem">
+        <div class="info-title">Global Capital Allocation Continuity (VTI + VXUS)</div>
+        <div class="info-body">The combination of VTI and VXUS establishes an institutional umbrella capturing roughly 10,000 corporate securities encompassing nearly all active global market capitalizations. This setup eliminates single-country tracking biases or sector over-concentration, relying entirely on systemic global economic generation.</div>
+      </div>
+      <div class="info-box" style="margin-bottom:1rem">
+        <div class="info-title">Volatilty Mitigation via Fixed Income Ballast (BND)</div>
+        <div class="info-body">A baseline 10% allocation in BND forms a strategic buffer zone. During steep global equity corrections, standard high-grade debt structures historically act as core shock-absorbers, dampening max system drawdowns. This behavioral buffer provides vital psychological stability to maintain capital alignment through broad market turns.</div>
+      </div>
+      <div class="info-box" style="margin-bottom:1rem">
+        <div class="info-title">Institutional Expense Minimization (~0.04% Aggregate Expense)</div>
+        <div class="info-body">This systemic framework eliminates structural fee loss. On an asset pool tier of $50,000, aggregate embedded management overhead bills at roughly $20 annually. Active alpha-seeking operations routinely draw 0.50% to 1.00% across similar pools, burning away major capital blocks over long compounding periods while underperforming baseline indices.</div>
+      </div>
+      <div class="info-box accent-box" style="margin-bottom:1rem">
+        <div class="info-title">Custodial Integration Mechanics (E*TRADE Roadmap)</div>
+        <div class="info-body" style="line-height: 1.8;">
+          1. Establish automated recurring deposit links within the E*TRADE platform.<br>
+          2. Scale programmatic recurring distributions at a structural target split: $30 VTI / $15 VXUS / $5 BND.<br>
+          3. Execute a single annual baseline portfolio review to trace asset drift thresholds past 5.00%, using structural capital inflows to reset targeted weights.<br>
+          4. Upon passing age milestones of 55–60, systematically transition fixed-income targets to 20–30% or transition toward target-date architectures to automate dynamic asset tracking.
+        </div>
+      </div>
+
+      <hr class="divider">
+      <p class="section-label" style="margin-top:0">Alternative Simplified Turnkey System</p>
+      <div class="info-box accent-box">
+        <div class="info-title">Turnkey Execution Target: VTTSX Institutional Asset Blends</div>
+        <div class="info-body">If zero-decision workflows are preferred to eliminate potential emotional tracking risks during market downturns, single target-date architectures serve as an ideal alternative. Deploying target allocations into institutional lines like VTTSX (Vanguard 2045) or FIPFX (Fidelity 2045) guarantees automated global diversification and integrated rebalancing mechanics. While slightly less customizable than a multi-fund assembly, it blocks tracking errors and maintains portfolio execution discipline.</div>
+      </div>
+
+      <div class="disclaimer">
+        <strong>Regulatory Disclaimer:</strong> This documentation is generated for educational and analytical reference contexts and does not represent personalized investment advice, financial planning optimization, or structural tax mandates. The content provider operates without fiduciary licenses or certified financial advisor registrations. Capital markets carry systemic hazards up to absolute loss of principal assets. Past tracking results form no predictive metrics for forward capital returns. Formal professional evaluation alongside a licensed Certified Financial Planner (CFP) or Registered Investment Advisor (RIA) is highly recommended before finalizing any core allocation strategy shifts.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+function switchTab(id) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+  if (id === 'basics' && !window.expChartBuilt) buildExpChart();
+  if (id === 'portfolios' && !window.portChartBuilt) buildPortChart();
+}
+
+function buildExpChart() {
+  window.expChartBuilt = true;
+  const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const textClr = isDark ? '#94a3b8' : '#475569';
+  const gridClr = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.04)';
+
+  const years = Array.from({length: 31}, (_, i) => i);
+  const calc = (rate) => years.map(y => Math.round(10000 * Math.pow(1 + rate, y)));
+  new Chart(document.getElementById('expChart'), {
+    type: 'line',
+    data: {
+      labels: years.map(y => y === 0 ? 'Start' : 'Yr ' + y),
+      datasets: [
+        { label: '0.03% ratio', data: calc(0.0697), borderColor: '#b91c1c', backgroundColor: 'transparent', pointRadius: 0, borderWidth: 2.5 },
+        { label: '0.50% ratio', data: calc(0.065), borderColor: '#475569', backgroundColor: 'transparent', pointRadius: 0, borderWidth: 2, borderDash: [4,4] },
+        { label: '1.00% ratio', data: calc(0.06), borderColor: '#cbd5e1', backgroundColor: 'transparent', pointRadius: 0, borderWidth: 1.5, borderDash: [2,2] }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => c.dataset.label + ': $' + c.raw.toLocaleString() }}},
+      scales: {
+        x: { ticks: { color: textClr, font: { size: 11, family: '-apple-system' }, maxRotation: 0, autoSkip: true, maxTicksLimit: 8 }, grid: { display: false }},
+        y: { ticks: { color: textClr, font: { size: 11, family: '-apple-system' }, callback: (v) => '$' + (v/1000).toFixed(0) + 'k' }, grid: { color: gridClr }}
+      }
+    }
+  });
+}
+
+function buildPortChart() {
+  window.portChartBuilt = true;
+  const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const textClr = isDark ? '#94a3b8' : '#475569';
+  const gridClr = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.04)';
+
+  const years = Array.from({length: 31}, (_, i) => i);
+  const calcContrib = (rate) => years.map(y => {
+    let bal = 5200;
+    for (let i = 0; i < y * 12; i++) { bal = bal * (1 + rate/12) + 100; }
+    return Math.round(bal);
+  });
+  new Chart(document.getElementById('portChart'), {
+    type: 'line',
+    data: {
+      labels: years.map(y => y === 0 ? 'Now' : 'Yr ' + y),
+      datasets: [
+        { label: 'Aggressive (8.5%)', data: calcContrib(0.085), borderColor: '#1e2229', backgroundColor: 'transparent', pointRadius: 0, borderWidth: 1.5, borderDash: [3,3] },
+        { label: 'Moderate (7%)', data: calcContrib(0.07), borderColor: '#b91c1c', backgroundColor: 'transparent', pointRadius: 0, borderWidth: 2.5 },
+        { label: 'Conservative (5%)', data: calcContrib(0.05), borderColor: '#94a3b8', backgroundColor: 'transparent', pointRadius: 0, borderWidth: 2, borderDash: [5,5] }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => c.dataset.label + ': $' + c.raw.toLocaleString() }}},
+      scales: {
+        x: { ticks: { color: textClr, font: { size: 11 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 8 }, grid: { display: false }},
+        y: { ticks: { color: textClr, font: { size: 11 }, callback: (v) => '$' + (v/1000).toFixed(0) + 'k' }, grid: { color: gridClr }}
+      }
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  buildExpChart();
+});
+setTimeout(buildExpChart, 300);
+</script>
+</body>
+</html>
